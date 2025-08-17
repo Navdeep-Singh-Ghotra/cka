@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: cent
+  name: cent
+spec:
+  volumes:
+    - name: test
+      emptyDir: {}
+  containers:
+  - image: centos:7
+    name: cent1
+    resources: {}
+    command:
+      - sleep
+      - "3600"
+    volumeMounts:
+      - name: test
+        mountPath: /centos1
+  - image: centos:7
+    name: cent2
+    resources: {}
+    command:
+      - sleep
+      - "3600"
+    volumeMounts:
+      - name: test
+        mountPath: /centos2
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
