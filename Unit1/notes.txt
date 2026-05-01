@@ -1,0 +1,7 @@
+Persistent volume, properties capacity, Access mode, storageclass, exist independently, reclaimed, reused, Reclaim policy
+Persistent volume claim, a request bu user or application for storage. Request --> Binding --> Dynamic provisioning
+
+Static provisioning
+Dynamic provisioning --> cluster dymanically provision a volume through a storageclass
+
+
