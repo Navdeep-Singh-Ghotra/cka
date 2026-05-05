@@ -3,5 +3,5 @@ get podIp
 
 jump into debug po
 
-k run tmp --rm -it --image=busybox -- sh
+`k run tmp --rm -it --image=busybox -- sh`
 
