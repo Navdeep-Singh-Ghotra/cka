@@ -1,5 +1,5 @@
 get podIp 
-`k get po -o wide | grep -v Name| awk '{print $1,$6}'
+`k get po -o wide | grep -v Name| awk '{print $1,$6}'`
 
 jump into debug po
 
