@@ -9,8 +9,7 @@ Server Version: v1.35.0
 vi editor
 
 
-###### 
-1. Navigate to the directory AppBuildDesign/TestFiles/app. Inspect the Dockerfile. Build the container image from the Dockerfile with the tag ckad-app:1.0.0. Run a container with the container image. Make the application available on port 1025. Execute a curl or wget command against the application’s endpoint.
+###### 1. Navigate to the directory AppBuildDesign/TestFiles/app. Inspect the Dockerfile. Build the container image from the Dockerfile with the tag ckad-app:1.0.0. Run a container with the container image. Make the application available on port 1025. Execute a curl or wget command against the application’s endpoint.
 <details>
 <summary> Solution</summary>
 
@@ -26,8 +25,10 @@ wget -O- localhost:1025
 podman logs ac8fec488aba(conatinerID)
 ```
 </details>
-3. Modify the Dockerfile from the previous exercise. Change the base image to the tag node:current-alpine3.20. Build the container image from the Dockerfile with the tag ckad-app:1.0.1. Ensure that container image has been created by listing it.
-Details
+###### 2. Modify the Dockerfile from the previous exercise. Change the base image to the tag node:current-alpine3.20. Build the container image from the Dockerfile with the tag ckad-app:1.0.1. Ensure that container image has been created by listing it.
+<details>
+<summary> Solution</summary>
+</details>
 Practice exercises
 
 Chapter 1 In the SWAPI playground, try sending the request starships/9/. What fields are included? How would this resemble a Kubernetes resource like a Deployment? Perform the command to list all API resources in your Kubernetes cluster. Save the output to a file named resources.csv.
