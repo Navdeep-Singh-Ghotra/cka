@@ -21,5 +21,28 @@ spec:
         name: nginx
         ports:
           - containerPort: 80
-        resources: {}
+            # add resources
+        resources: 
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+              #env variables
+        env:
+        - name: GREETING
+          value: "Warm greetings to"
+        - name: HONORIFIC
+          value: "The Most Honorable"
+        - name: NAME
+          value: "Kubernetes"
+        - name: MESSAGE
+          value: "$(GREETING) $(HONORIFIC) $(NAME)"
+        command: ["echo"]
+        args: ["$(MESSAGE)"]
+            # multi container pod
+      - image: busybox
+        command: ["sleep", "infinity"]
+        name: busybox
 status: {}
