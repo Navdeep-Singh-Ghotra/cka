@@ -1,51 +1,49 @@
 Storage  10%  --> Yes
 6
 
-Understand storage classes, persistent volumes
-Understand volume mode, access modes and reclaim policies for volumes
-Understand persistent volume claims primitive
-Know how to configure applications with persistent storage
+Implement storage classes and dynamic volume provisioning
+Configure volume types, access modes and reclaim policies
+Manage persistent volumes and persistent volume claims
 
 Troubleshooting 30% --> No
 7
 
-Evaluate cluster and node logging
-Understand how to monitor applications
-Manage container stdout & stderr logs
-Troubleshoot application failure
-Troubleshoot cluster component failure
-Troubleshoot networking
-
+Troubleshoot clusters and nodes
+Troubleshoot cluster components
+Monitor cluster and application resource usage
+Manage and evaluate container output streams
+Troubleshoot services and networking
 
 Workloads & Scheduling15% --> Yes
 3,4
 
-Understand deployments and how to perform rolling update and rollbacks
+Understand application deployments and how to perform rolling update and rollbacks
 Use ConfigMaps and Secrets to configure applications
-Know how to scale applications
+Configure workload autoscaling
 Understand the primitives used to create robust, self-healing, application deployments
-Understand how resource limits can affect Pod scheduling
-Awareness of manifest management and common templating tools
+Configure Pod admission and scheduling (limits, node affinity, etc.)
 
 Cluster Architecture, Installation & Configuration 25% --> No
 2
 
 Manage role based access control (RBAC)
-Use Kubeadm to install a basic cluster
-Manage a highly-available Kubernetes cluster
-Provision underlying infrastructure to deploy a Kubernetes cluster
-Perform a version upgrade on a Kubernetes cluster using Kubeadm
-Implement etcd backup and restore
+Prepare underlying infrastructure for installing a Kubernetes cluster
+Create and manage Kubernetes clusters using kubeadm
+Manage the lifecycle of Kubernetes clusters
+Implement and configure a highly-available control plane
+Use Helm and Kustomize to install cluster components
+Understand extension interfaces (CNI, CSI, CRI, etc.)
+Understand CRDs, install and configure operators
 
 Services & Networking 20%  --> Yes
 5
 
-Understand host networking configuration on the cluster nodes
 Understand connectivity between Pods
-Understand ClusterIP, NodePort, LoadBalancer service types and endpoints
+Define and enforce Network Policies
+Use ClusterIP, NodePort, LoadBalancer service types and endpoints
+Use the Gateway API to manage Ingress traffic
 Know how to use Ingress controllers and Ingress resources
-Know how to configure and use CoreDNS
-Choose an appropriate container network interface plugin
+Understand and use CoreDNS
 
 3,4,5,6
 left with 2 and 7-->55%
