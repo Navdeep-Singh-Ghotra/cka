@@ -1,0 +1,18 @@
+###Troubleshoot clusters and nodes
+kubectl cluster-info dump
+kubectl get nodes
+kubectl describe node kube-worker-1
+kubectl get node kube-worker-1 -o yaml
+Control Plane nodes
+/var/log/kube-apiserver.log - API Server, responsible for serving the API
+/var/log/kube-scheduler.log - Scheduler, responsible for making scheduling decisions
+/var/log/kube-controller-manager.log - a component that runs most Kubernetes built-in controllers, with the notable exception of scheduling (the kube-scheduler handles scheduling).
+Worker Nodes
+/var/log/kubelet.log - logs from the kubelet, responsible for running containers on the node
+/var/log/kube-proxy.log - logs from kube-proxy, which is responsible for directing traffic to Service endpoints
+
+
+###Troubleshoot cluster components
+###Monitor cluster and application resource usage
+###Manage and evaluate container output streams
+###Troubleshoot services and networking

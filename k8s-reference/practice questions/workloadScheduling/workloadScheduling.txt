@@ -1,0 +1,21 @@
+####Understand application deployments and how to perform rolling update and rollbacks
+
+####Use ConfigMaps and Secrets to configure applications
+k create cm 
+k create secrets
+mountPath:
+
+####Configure workload autoscaling
+Horizontal pod autoscaling
+behavior:
+  scaleDown:
+    stabilizationWindowSeconds: 300
+Kubernetes Event Driven Autoscaler (KEDA).
+####Understand the primitives used to create robust, self-healing, application deployments
+deployments
+####Configure Pod admission and scheduling (limits, node affinity, etc.)
+nodeSelector
+Affinity and anti-affinity
+Node affinity
+Node affinity weight
+Pod affinity and anti affinity

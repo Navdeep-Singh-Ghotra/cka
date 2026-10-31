@@ -1,0 +1,43 @@
+Helm Deployments & Customization
+
+    Adding repositories, searching charts, and pulling specific versions.
+
+    Exporting manifests via helm template to inspect YAML.
+
+    Installing charts with specific flags (e.g., skipping CRDs with --set crds.install=false not --skip-crds).
+
+Networking & Ingress / Gateway API
+
+    NetworkPolicies: Comparing multiple policies to implement the least-permissive ingress/egress rule between frontend and backend pods.
+
+    Gateway API & Ingress: Migrating standard Ingress resources to HTTPRoute and Gateway configurations while preserving TLS secrets.
+
+    CNI Setup: Installing CNI plugins (e.g., Calico/Flannel) and understanding which supports NetworkPolicies.
+
+Storage & Disaster Recovery Scenarios
+
+    Handling deleted namespaces where PVs are set to Retain.
+
+    Re-binding existing retained PVs with new PVCs/StorageClasses and mounting them back to deployments.
+
+    Setting up custom StorageClasses with specific provisioners and marking one as default.
+
+Workload Architecture & Resource Management
+
+    Adding sidecar/logging containers sharing an emptyDir log volume with the main application.
+
+    Debugging Pending pods caused by node memory/CPU pressure: calculating available node capacity, adjusting deployment requests/limits, and rolling restarts.
+
+    Implementing HPA with target CPU utilization metrics and custom scale-down/stabilization behavior.
+
+Core Control Plane Troubleshooting & Systemd
+
+    Diagnosing failed kubectl commands caused by misconfigured kube-apiserver flags (e.g., wrong etcd endpoints, cert mismatches).
+
+    Configuring low-level runtime dependencies (e.g., setting kernel parameters via sysctl --system and managing runtime daemons with systemctl).
+
+CRDs & Manifest Discovery
+
+    Filtering and listing custom resources without messy CLI output.
+
+    Using kubectl explain --recursive <crd> to quickly navigate deeply nested CRD specs without digging through web search.

@@ -1,0 +1,11 @@
+###Implement storage classes and dynamic volume provisioning
+based on the API object StorageClass from the API group storage.k8s.io
+To enable dynamic provisioning, a cluster administrator needs to pre-create one or more StorageClass objects for users.
+An administrator can mark a specific StorageClass as default by adding the storageclass.kubernetes.io/is-default-class annotation to it. 
+if you set the storageclass.kubernetes.io/is-default-class annotation to true on more than one StorageClass in your cluster, and you then create a PersistentVolumeClaim with no storageClassName set, Kubernetes uses the most recently created default StorageClass.
+
+
+###Configure volume types, access modes and reclaim policies
+
+###Manage persistent volumes and persistent volume claims
+
